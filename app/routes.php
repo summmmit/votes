@@ -32,6 +32,14 @@ Route::group(array('before' => 'guest'), function(){
         'as'  => 'account-create',
         'uses' => 'NewAccountController@getCreate'
     ));
+
+    /*
+     * Login Account (get)
+     */
+    Route::get('/account/sign-in', array(
+        'as'  => 'account-sign-in',
+        'uses' => 'NewAccountController@getSignIn'
+    ));
     /*
      * Activate Account (get)
      */

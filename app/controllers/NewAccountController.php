@@ -13,4 +13,8 @@ print_r(Input::all());
 echo "</pre>";
     }
     
+    public function getSignIn(){
+       return View::make('account.login');
+    }
+    
 }
