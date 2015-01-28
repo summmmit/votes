@@ -7,6 +7,7 @@
  */
 
 class FormalController extends BaseController {
+    
     public function getCreate(){
        return View::make('account.account');
     }
@@ -39,9 +40,9 @@ class FormalController extends BaseController {
             if($create){
 
                 //send email
-                Mail::send('emails.auth.activate', array('link' => URL::route('account-activate', $code), 'username' => $username), function($message) use ($create){
-                    $message->to($create->email, $create->username)->subject('Activate Your Account');
-                });
+//                Mail::send('emails.auth.activate', array('link' => URL::route('account-activate', $code), 'username' => $username), function($message) use ($create){
+//                    $message->to($create->email, $create->username)->subject('Activate Your Account');
+//                });
                 return Redirect::route('home')
                     ->with('global' , 'Your account has been createde u can activate now');
             }else{

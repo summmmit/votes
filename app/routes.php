@@ -20,7 +20,7 @@ Route::group(array('before' => 'guest'), function(){
          */
         Route::Post('/account/create', array(
             'as'  => 'account-create-post',
-            'uses' => 'FormalController@postCreate'
+            'uses' => 'NewAccountController@postCreate'
         ));
 
     });
@@ -30,7 +30,7 @@ Route::group(array('before' => 'guest'), function(){
      */
     Route::get('/account/create', array(
         'as'  => 'account-create',
-        'uses' => 'FormalController@getCreate'
+        'uses' => 'NewAccountController@getCreate'
     ));
     /*
      * Activate Account (get)
