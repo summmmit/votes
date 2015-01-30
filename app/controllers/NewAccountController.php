@@ -17,4 +17,8 @@ echo "</pre>";
        return View::make('account.login');
     }
     
+    public function getUserProfile(){
+       return View::make('account.UserProfile'); 
+    }
+    
 }

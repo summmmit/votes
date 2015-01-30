@@ -48,4 +48,12 @@ Route::group(array('before' => 'guest'), function(){
         'uses' => 'FormalController@getActivate'
     ));
 
+    /*
+     *  User Profile (get)
+     */
+    Route::get('/account/user/profile', array(
+        'as'  => 'account-user-profile',
+        'uses' => 'NewAccountController@getUserProfile'
+    ));
+
 });
