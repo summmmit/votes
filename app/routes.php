@@ -33,19 +33,4 @@ Route::group(array('before' => 'guest'), function(){
         'uses' => 'NewAccountController@getCreate'
     ));
 
-    /*
-     * Login Account (get)
-     */
-    Route::get('/account/sign-in', array(
-        'as'  => 'account-sign-in',
-        'uses' => 'NewAccountController@getSignIn'
-    ));
-    /*
-     * Activate Account (get)
-     */
-    Route::get('/account/activate/{code}', array(
-        'as'  => 'account-activate',
-        'uses' => 'FormalController@getActivate'
-    ));
-
 });

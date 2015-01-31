@@ -27,31 +27,31 @@
                                 <label class="control-label">
                                     First Name <span class="symbol required"></span>
                                 </label>
-                                <input type="text" placeholder="Insert your First Name" class="form-control" id="firstname" name="first_name">
+                                <input type="text" placeholder="Insert your First Name" class="form-control" id="firstname" name="first_name" {{ (Input::old('first_name')) ? 'value = "' .e(Input::old('first_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
                                     Middle Name
                                 </label>
-                                <input type="text" placeholder="Insert your Middle Name" class="form-control" id="middlename" name="first_name">
+                                <input type="text" placeholder="Insert your Middle Name" class="form-control" id="middlename" name="middle_name" {{ (Input::old('middle_name')) ? 'value = "' .e(Input::old('middle_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
                                     Last Name <span class="symbol required"></span>
                                 </label>
-                                <input type="text" placeholder="Insert your Last Name" class="form-control" id="lastname" name="last_name">
+                                <input type="text" placeholder="Insert your Last Name" class="form-control" id="lastname" name="last_name" {{ (Input::old('last_name')) ? 'value = "' .e(Input::old('last_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
                                     Email Address
                                 </label>
-                                <input type="email" placeholder="Email Address" class="form-control" id="email" name="email">
+                                <input type="email" placeholder="Email Address" class="form-control" id="email" name="email" {{ (Input::old('email')) ? 'value = "' .e(Input::old('email')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
                                     Mobile Number <span class="symbol required"></span>
                                 </label>
-                                <input type="number" placeholder="Mobile Number" class="form-control" id="mobile_number" name="mobile_number">
+                                <input type="number" placeholder="Mobile Number" class="form-control" id="mobile_number" name="mobile_number" {{ (Input::old('mobile_number')) ? 'value = "' .e(Input::old('mobile_number')). '" ':'' }}>
                             </div>
                             <div class="form-group connected-group">
                                 <label class="control-label">
@@ -59,7 +59,7 @@
                                 </label>
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <select name="dd" id="dd" class="form-control" >
+                                        <select name="dd" id="dd" class="form-control"  {{ (Input::old('dd')) ? 'value = "' .e(Input::old('dd')). '" ':'' }}>
                                             <option value="">DD</option>
                                             <option value="01">1</option>
                                             <option value="02">2</option>
@@ -95,7 +95,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-3">
-                                        <select name="mm" id="mm" class="form-control" >
+                                        <select name="mm" id="mm" class="form-control" {{ (Input::old('mm')) ? 'value = "' .e(Input::old('mm')). '" ':'' }}>
                                             <option value="">MM</option>
                                             <option value="01">1</option>
                                             <option value="02">2</option>
@@ -112,7 +112,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-3">
-                                        <input type="text" placeholder="YYYY" id="yyyy" name="yyyy" class="form-control">
+                                        <input type="text" placeholder="YYYY" id="yyyy" name="yyyy" class="form-control" {{ (Input::old('yyyy')) ? 'value = "' .e(Input::old('yyyy')). '" ':'' }}>
                                     </div>
                                 </div>
                             </div>
@@ -122,11 +122,11 @@
                                 </label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="gender" id="gender_female">
+                                        <input type="radio" class="grey" value="" name="gender" id="gender_female" {{ (Input::old('gender')) ? 'value = "' .e(Input::old('gender')). '" ':'' }}>
                                         Female
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="gender"  id="gender_male">
+                                        <input type="radio" class="grey" value="" name="gender"  id="gender_male" {{ (Input::old('gender')) ? 'value = "' .e(Input::old('gender')). '" ':'' }}>
                                         Male
                                     </label>
                                 </div>
@@ -137,11 +137,11 @@
                                 </label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="married" id="unmarried">
+                                        <input type="radio" class="grey" value="" name="marriage_status" id="unmarried" {{ (Input::old('marriage_status')) ? 'value = "' .e(Input::old('marriage_status')). '" ':'' }}>
                                         Unmarried
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="married"  id="married">
+                                        <input type="radio" class="grey" value="" name="marriage_status"  id="married" {{ (Input::old('marriage_status')) ? 'value = "' .e(Input::old('marriage_status')). '" ':'' }}>
                                         Married
                                     </label>
                                 </div>
@@ -152,7 +152,7 @@
                                         <label class="control-label">
                                             Voter Id of Father / Husband <span class="symbol required"></span>
                                         </label>
-                                        <input type="text" placeholder="Voter Id of Father / Husband" class="form-control" id="relative_id" name="relative_id">
+                                        <input type="text" placeholder="Voter Id of Father / Husband" class="form-control" id="relative_id" name="relative_id" {{ (Input::old('relative_id')) ? 'value = "' .e(Input::old('relative_id')). '" ':'' }}>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -162,11 +162,11 @@
                                         </label>
                                         <div>
                                             <label class="radio-inline">
-                                                <input type="radio" class="grey" value="" name="relation_with_person" id="father">
+                                                <input type="radio" class="grey" value="" name="relation_with_person" id="father" {{ (Input::old('relation_with_person')) ? 'value = "' .e(Input::old('relation_with_person')). '" ':'' }}>
                                                 Father
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" class="grey" value="" name="relation_with_person"  id="husband">
+                                                <input type="radio" class="grey" value="" name="relation_with_person"  id="husband" {{ (Input::old('relation_with_person')) ? 'value = "' .e(Input::old('relation_with_person')). '" ':'' }}>
                                                 Husband
                                             </label>
                                         </div>
@@ -176,28 +176,28 @@
                         </div>
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">
                                             House Number <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="house_number" id="house_number">
+                                        <input class="form-control" type="text" name="house_number" id="house_number" {{ (Input::old('house_number')) ? 'value = "' .e(Input::old('house_number')). '" ':'' }}>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">
                                             Street Number <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="street_number" id="street_number">
+                                        <input class="form-control" type="text" name="street_number" id="street_number" {{ (Input::old('street_number')) ? 'value = "' .e(Input::old('street_number')). '" ':'' }}>
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">
                                             Your Area <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="area" id="area">
+                                        <input class="form-control" type="text" name="area" id="area" {{ (Input::old('area')) ? 'value = "' .e(Input::old('area')). '" ':'' }}>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                                         <label class="control-label">
                                             Town / Village <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="town" id="town">
+                                        <input class="form-control" type="text" name="town" id="town" {{ (Input::old('town')) ? 'value = "' .e(Input::old('town')). '" ':'' }}>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -215,7 +215,7 @@
                                         <label class="control-label">
                                             City <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="city" id="city">
+                                        <input class="form-control" type="text" name="city" id="city" {{ (Input::old('city')) ? 'value = "' .e(Input::old('city')). '" ':'' }}>
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@
                                         <label class="control-label">
                                             Pin Code <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="zipcode" id="pin_code">
+                                        <input class="form-control" type="text" name="zipcode" id="pin_code" {{ (Input::old('zipcode')) ? 'value = "' .e(Input::old('zipcode')). '" ':'' }}>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -233,7 +233,7 @@
                                         <label class="control-label">
                                             State <span class="symbol required"></span>
                                         </label>
-                                        <select class="form-control" id="state" name="state">
+                                        <select class="form-control" id="state" name="state" {{ (Input::old('state')) ? 'value = "' .e(Input::old('state')). '" ':'' }}>
                                             <option value="">Select...</option>
                                             <option value="up">Uttar Pradesh</option>
                                             <option value="dl">Delhi</option>
@@ -247,7 +247,7 @@
                                 <label class="control-label">
                                     Country <span class="symbol required"></span>
                                 </label>
-                                <input class="form-control" type="text" name="country" id="country">
+                                <input class="form-control" type="text" name="country" id="country" {{ (Input::old('country')) ? 'value = "' .e(Input::old('country')). '" ':'' }}>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -262,7 +262,7 @@
                                                 <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                                 <div>
                                                     <span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Change</span>
-                                                        <input type="file">
+                                                        <input type="file" name="pic" {{ (Input::old('pic')) ? 'value = "' .e(Input::old('pic')). '" ':'' }}>
                                                     </span>
                                                     <a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
                                                         <i class="fa fa-times"></i> Remove
@@ -305,11 +305,11 @@
                                 </p>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="newsletter">
+                                        <input type="radio" class="grey" value="" name="newsletter" {{ (Input::old('newsletter')) ? 'value = "' .e(Input::old('newsletter')). '" ':'' }}>
                                         No
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="newsletter">
+                                        <input type="radio" class="grey" value="" name="newsletter" {{ (Input::old('newsletter')) ? 'value = "' .e(Input::old('newsletter')). '" ':'' }}>
                                         Yes
                                     </label>
                                 </div>
