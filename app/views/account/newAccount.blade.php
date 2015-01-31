@@ -347,8 +347,13 @@
 
 @section('scripts')
 <!-- Scripts for This page only -->
-<script src="{{ URL::asset('assets/plugins/ckeditor/ckeditor.js'); }}"></script>
-<script src="{{ URL::asset('assets/plugins/ckeditor/adapters/jquery.js'); }}"></script>
 <script src="{{ URL::asset('assets/js/form-validation.js'); }}"></script>
 
+<script>
+jQuery(document).ready(function() {
+    Main.init();
+    SVExamples.init();
+    FormValidator.init();
+});
+</script>
 @stop

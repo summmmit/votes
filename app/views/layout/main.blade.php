@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
     <head>
         <title>Authentication System</title>
         <meta charset="UTF-8">
