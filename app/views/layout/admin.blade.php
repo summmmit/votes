@@ -1372,12 +1372,12 @@
         <script src="{{ URL::asset('assets/js/subview.js'); }} "></script>
         <script src="{{ URL::asset('assets/js/subview-examples.js'); }} "></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
-        <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        @yield('scripts')
-        <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <!-- start: CORE JAVASCRIPTS  -->
         <script src="{{ URL::asset('assets/js/main.js'); }} "></script>
         <!-- end: CORE JAVASCRIPTS  -->
+        <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+        @yield('scripts')
+        <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
     </body>
     <!-- end: BODY -->
 </html>

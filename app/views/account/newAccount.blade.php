@@ -1,15 +1,26 @@
 @extends('layout.admin')
+@section('page_header')
+<h1><i class="fa fa-pencil-square"></i> Register Your Details<small>These are the details of you to be included in our database.</small></h1>
+@stop
 
+@section('page_breadcrumb')
+<ol class="breadcrumb">
+    <li>
+        <a href="#">
+            Dashboard
+        </a>
+    </li>
+    <li class="active">
+        Register
+    </li>
+</ol>
+@stop
 @section('content')
 <div class="row">
     <div class="col-md-12">
         <!-- start: FORM VALIDATION 1 PANEL -->
         <div class="panel panel-white">
             <div class="panel-heading">
-                <h2><i class="fa fa-pencil-square"></i> REGISTER</h2>
-                <p>
-                    Create one account to manage everything you do with Rapido, from your shopping preferences to your Rapido activity.
-                </p>
             </div>
             <div class="panel-body">
                 <form action="{{ URL::route('account-create-post') }}" role="form" id="form" method="post">
@@ -27,19 +38,19 @@
                                 <label class="control-label">
                                     First Name <span class="symbol required"></span>
                                 </label>
-                                <input type="text" placeholder="Insert your First Name" class="form-control" id="firstname" name="first_name" {{ (Input::old('first_name')) ? 'value = "' .e(Input::old('first_name')). '" ':'' }}>
+                                <input type="text" placeholder="Insert your First Name" class="form-control" id="first_name" name="first_name" {{ (Input::old('first_name')) ? 'value = "' .e(Input::old('first_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
-                                    Middle Name
+                                    Middle Name <span class="symbol"></span>
                                 </label>
-                                <input type="text" placeholder="Insert your Middle Name" class="form-control" id="middlename" name="middle_name" {{ (Input::old('middle_name')) ? 'value = "' .e(Input::old('middle_name')). '" ':'' }}>
+                                <input type="text" placeholder="Insert your Middle Name" class="form-control" id="middle_name" name="middle_name" {{ (Input::old('middle_name')) ? 'value = "' .e(Input::old('middle_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
                                     Last Name <span class="symbol required"></span>
                                 </label>
-                                <input type="text" placeholder="Insert your Last Name" class="form-control" id="lastname" name="last_name" {{ (Input::old('last_name')) ? 'value = "' .e(Input::old('last_name')). '" ':'' }}>
+                                <input type="text" placeholder="Insert your Last Name" class="form-control" id="last_name" name="last_name" {{ (Input::old('last_name')) ? 'value = "' .e(Input::old('last_name')). '" ':'' }}>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
@@ -175,59 +186,25 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">
-                                            House Number <span class="symbol required"></span>
+                                            Address 1 <span class="symbol required"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="house_number" id="house_number" {{ (Input::old('house_number')) ? 'value = "' .e(Input::old('house_number')). '" ':'' }}>
+                                        <input class="form-control" type="text" name="add_1" id="add_1" {{ (Input::old('add_1')) ? 'value = "' .e(Input::old('add_1')). '" ':'' }}>
                                     </div>
-                                </div>
-                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">
-                                            Street Number <span class="symbol required"></span>
+                                            Address 2 <span class="symbol"></span>
                                         </label>
-                                        <input class="form-control" type="text" name="street_number" id="street_number" {{ (Input::old('street_number')) ? 'value = "' .e(Input::old('street_number')). '" ':'' }}>
+                                        <input class="form-control" type="text" name="add_2" id="add_2" {{ (Input::old('add_2')) ? 'value = "' .e(Input::old('add_2')). '" ':'' }}>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Your Area <span class="symbol required"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="area" id="area" {{ (Input::old('area')) ? 'value = "' .e(Input::old('area')). '" ':'' }}>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Town / Village <span class="symbol required"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="town" id="town" {{ (Input::old('town')) ? 'value = "' .e(Input::old('town')). '" ':'' }}>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label class="control-label">
                                             City <span class="symbol required"></span>
                                         </label>
                                         <input class="form-control" type="text" name="city" id="city" {{ (Input::old('city')) ? 'value = "' .e(Input::old('city')). '" ':'' }}>
                                     </div>
-                                </div>
-                            </div>
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Pin Code <span class="symbol required"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="zipcode" id="pin_code" {{ (Input::old('zipcode')) ? 'value = "' .e(Input::old('zipcode')). '" ':'' }}>
-                                    </div>
-                                </div>
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label class="control-label">
@@ -242,16 +219,28 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    Country <span class="symbol required"></span>
-                                </label>
-                                <input class="form-control" type="text" name="country" id="country" {{ (Input::old('country')) ? 'value = "' .e(Input::old('country')). '" ':'' }}>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-group">
+                                        <label class="control-label">
+                                            Pin Code <span class="symbol required"></span>
+                                        </label>
+                                        <input class="form-control" type="text" name="pin_code" id="pin_code" {{ (Input::old('pin_code')) ? 'value = "' .e(Input::old('pin_code')). '" ':'' }}>
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            Country <span class="symbol required"></span>
+                                        </label>
+                                        <select class="form-control" id="country" name="country" {{ (Input::old('country')) ? 'value = "' .e(Input::old('country')). '" ':'' }}>
+                                            <option value="">Select...</option>
+                                            <option value="up" selected>India / भारत</option>
+                                            <option value="dl">Delhi</option>
+                                            <option value="mp">Madhya Pradesh</option>
+                                            <option value="raj">Rajasthan</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group center">
                                         <div class="col-sm-12">
                                             <label>
                                                 Your Picture
@@ -271,30 +260,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <label>
-                                                Your Father / Husband
-                                            </label>
-                                            <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                <div class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA?text=no+image" alt=""/>
-                                                </div>
-                                                <div class="fileupload-preview fileupload-exists thumbnail"></div>
-                                                <div>
-                                                    <span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Change</span>
-                                                        <input type="file">
-                                                    </span>
-                                                    <a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
-                                                        <i class="fa fa-times"></i> Remove
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <hr>
                                 <label class="control-label">
@@ -347,13 +312,15 @@
 
 @section('scripts')
 <!-- Scripts for This page only -->
-<script src="{{ URL::asset('assets/js/form-validation.js'); }}"></script>
+<script src="{{ URL::asset('assets/js/modifiedJs/form-validation.js'); }}"></script>
+<script src="{{ URL::asset('assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js'); }}"></script>
 
 <script>
 jQuery(document).ready(function() {
     Main.init();
     SVExamples.init();
     FormValidator.init();
+				FormElements.init();
 });
 </script>
 @stop

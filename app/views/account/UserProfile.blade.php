@@ -171,6 +171,7 @@
             <!-- end: FORM VALIDATION 1 PANEL -->
         </div>
     </div>
+
     @stop
 
     @section('scripts')
