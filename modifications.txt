@@ -2,3 +2,4 @@ Modifications to make :
 
 1. Add salutations in user account page .
 2. Change the address columns in user_details table to add1 and add2.
+3. Remove fathers uploading thumbnail , put a simple picture thumbnail.

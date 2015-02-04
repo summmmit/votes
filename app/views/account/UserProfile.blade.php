@@ -129,22 +129,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="user-left">                                    
-                                <h4>Home Address :</h4><small>(Last updated on 12/22/2015)</small>
-                                <address class="text-right">
-                                    <strong>House Number: 256, Street Number: 9</strong>
-                                    <br>
-                                    New Defence Colony, Muradnagar
-                                    <br>
-                                    Ghaziabad
-                                    <br>
-                                    Uttar Pradesh, India
-                                    <br>
-                                    <strong>
-                                        <abbr title="zipcode">Pin Code:</abbr> (201206)
-                                    </strong>
-                                </address>  
+                                    <h4>Home Address :</h4><small>(Last updated on 12/22/2015)</small>
+                                    <address class="text-right">
+                                        <strong>House Number: 256, Street Number: 9</strong>
+                                        <br>
+                                        New Defence Colony, Muradnagar
+                                        <br>
+                                        Ghaziabad
+                                        <br>
+                                        Uttar Pradesh, India
+                                        <br>
+                                        <strong>
+                                            <abbr title="zipcode">Pin Code:</abbr> (201206)
+                                        </strong>
+                                    </address>  
                                 </div>
-                            <hr>                                      
+                                <hr>                                      
                             </div>
                             <div class="col-md-6">
                                 <h4>Work Address :</h4><small>(Last updated on 12/22/2015) </small>
@@ -161,7 +161,7 @@
                                         <abbr title="zipcode">Pin Code:</abbr> (201206)
                                     </strong>
                                 </address> 
-                            <hr>                                       
+                                <hr>                                       
                             </div>
                         </div>
                         <hr>
