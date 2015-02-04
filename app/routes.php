@@ -22,6 +22,14 @@ Route::group(array('before' => 'guest'), function(){
             'as'  => 'account-create-post',
             'uses' => 'NewAccountController@postCreate'
         ));
+        
+         /*
+         * Give Your Choice (post)
+         */
+        Route::Post('/account/user/ballot', array(
+            'as'  => 'account-user-ballot-post',
+            'uses' => 'VoteController@postMyBallot'
+        ));
 
     });
 
@@ -53,5 +61,12 @@ Route::group(array('before' => 'guest'), function(){
     Route::get('/account/user/profile', array(
         'as'  => 'account-user-profile',
         'uses' => 'NewAccountController@getUserProfile'
+    ));
+    /*
+     *  User Profile (get)
+     */
+    Route::get('/account/user/myballot', array(
+        'as'  => 'account-user-myballot',
+        'uses' => 'VoteController@getMyBallot'
     ));
 });
