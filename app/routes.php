@@ -30,6 +30,14 @@ Route::group(array('before' => 'guest'), function(){
             'as'  => 'account-user-ballot-post',
             'uses' => 'VoteController@postMyBallot'
         ));
+        
+         /*
+         * Give Your Choice (post)
+         */
+        Route::Post('/account/test/pic/upload', array(
+            'as'  => 'account-test-pic-upload-post',
+            'uses' => 'TestController@postPicUpload'
+        ));
 
     });
 
@@ -62,11 +70,20 @@ Route::group(array('before' => 'guest'), function(){
         'as'  => 'account-user-profile',
         'uses' => 'NewAccountController@getUserProfile'
     ));
+    
     /*
-     *  User Profile (get)
+     *  User Ballot (get)
      */
     Route::get('/account/user/myballot', array(
         'as'  => 'account-user-myballot',
         'uses' => 'VoteController@getMyBallot'
+    ));
+    
+    /*
+     *  Picture Upload (test)
+     */
+    Route::get('/account/test/pic/upload', array(
+        'as'  => 'account-test-pic-upload',
+        'uses' => 'TestController@getPicUpload'
     ));
 });
