@@ -29,9 +29,6 @@
                             <div class="errorHandler alert alert-danger no-display">
                                 <i class="fa fa-times-sign"></i> You have some form errors. Please check below.
                             </div>
-                            <div class="successHandler alert alert-success no-display">
-                                <i class="fa fa-ok"></i> Your form validation is successful!
-                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
@@ -133,11 +130,11 @@
                                 </label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="gender" id="gender_female" {{ (Input::old('gender')) ? 'value = "' .e(Input::old('gender')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="1" name="sex" id="sex_female">
                                         Female
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="gender"  id="gender_male" {{ (Input::old('gender')) ? 'value = "' .e(Input::old('gender')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="2" name="sex"  id="sex_male">
                                         Male
                                     </label>
                                 </div>
@@ -148,11 +145,11 @@
                                 </label>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="marriage_status" id="unmarried" {{ (Input::old('marriage_status')) ? 'value = "' .e(Input::old('marriage_status')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="0" name="marriage_status" id="unmarried">
                                         Unmarried
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="marriage_status"  id="married" {{ (Input::old('marriage_status')) ? 'value = "' .e(Input::old('marriage_status')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="1" name="marriage_status"  id="married">
                                         Married
                                     </label>
                                 </div>
@@ -173,11 +170,11 @@
                                         </label>
                                         <div>
                                             <label class="radio-inline">
-                                                <input type="radio" class="grey" value="" name="relation_with_person" id="father" {{ (Input::old('relation_with_person')) ? 'value = "' .e(Input::old('relation_with_person')). '" ':'' }}>
+                                                <input type="radio" class="grey" value="1" name="relation_with_person" id="father">
                                                 Father
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" class="grey" value="" name="relation_with_person"  id="husband" {{ (Input::old('relation_with_person')) ? 'value = "' .e(Input::old('relation_with_person')). '" ':'' }}>
+                                                <input type="radio" class="grey" value="2" name="relation_with_person"  id="husband">
                                                 Husband
                                             </label>
                                         </div>
@@ -186,24 +183,24 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Address 1 <span class="symbol required"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="add_1" id="add_1" {{ (Input::old('add_1')) ? 'value = "' .e(Input::old('add_1')). '" ':'' }}>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Address 2 <span class="symbol"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="add_2" id="add_2" {{ (Input::old('add_2')) ? 'value = "' .e(Input::old('add_2')). '" ':'' }}>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            City <span class="symbol required"></span>
-                                        </label>
-                                        <input class="form-control" type="text" name="city" id="city" {{ (Input::old('city')) ? 'value = "' .e(Input::old('city')). '" ':'' }}>
-                                    </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Address 1 <span class="symbol required"></span>
+                                </label>
+                                <input class="form-control" type="text" name="add_1" id="add_1" {{ (Input::old('add_1')) ? 'value = "' .e(Input::old('add_1')). '" ':'' }}>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Address 2 <span class="symbol"></span>
+                                </label>
+                                <input class="form-control" type="text" name="add_2" id="add_2" {{ (Input::old('add_2')) ? 'value = "' .e(Input::old('add_2')). '" ':'' }}>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    City <span class="symbol required"></span>
+                                </label>
+                                <input class="form-control" type="text" name="city" id="city" {{ (Input::old('city')) ? 'value = "' .e(Input::old('city')). '" ':'' }}>
+                            </div>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -228,38 +225,38 @@
                                     </div>
                                 </div>
                             </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Country <span class="symbol required"></span>
-                                        </label>
-                                        <select class="form-control" id="country" name="country" {{ (Input::old('country')) ? 'value = "' .e(Input::old('country')). '" ':'' }}>
-                                            <option value="">Select...</option>
-                                            <option value="up" selected>India / भारत</option>
-                                            <option value="dl">Delhi</option>
-                                            <option value="mp">Madhya Pradesh</option>
-                                            <option value="raj">Rajasthan</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group center">
-                                        <div class="col-sm-12">
-                                            <label>
-                                                Your Picture
-                                            </label>
-                                            <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                <div class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA?text=no+image" alt=""/>
-                                                </div>
-                                                <div class="fileupload-preview fileupload-exists thumbnail"></div>
-                                                <div>
-                                                    <span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Change</span>
-                                                        <input type="file" name="pic" {{ (Input::old('pic')) ? 'value = "' .e(Input::old('pic')). '" ':'' }}>
-                                                    </span>
-                                                    <a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
-                                                        <i class="fa fa-times"></i> Remove
-                                                    </a>
-                                                </div>
-                                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Country <span class="symbol required"></span>
+                                </label>
+                                <select class="form-control" id="country" name="country" {{ (Input::old('country')) ? 'value = "' .e(Input::old('country')). '" ':'' }}>
+                                    <option value="">Select...</option>
+                                    <option value="up" selected>India / भारत</option>
+                                    <option value="dl">Delhi</option>
+                                    <option value="mp">Madhya Pradesh</option>
+                                    <option value="raj">Rajasthan</option>
+                                </select>
+                            </div>
+                            <div class="form-group center">
+                                <div class="col-sm-12">
+                                    <label>
+                                        Your Picture
+                                    </label>
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA?text=no+image" alt=""/>
+                                        </div>
+                                        <div class="fileupload-preview fileupload-exists thumbnail"></div>
+                                        <div>
+                                            <span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Change</span>
+                                                <input type="file" name="pic">
+                                            </span>
+                                            <a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
+                                                <i class="fa fa-times"></i> Remove
+                                            </a>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <hr>
                                 <label class="control-label">
@@ -270,11 +267,11 @@
                                 </p>
                                 <div>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="newsletter" {{ (Input::old('newsletter')) ? 'value = "' .e(Input::old('newsletter')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="0" name="newsletter" >
                                         No
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" class="grey" value="" name="newsletter" {{ (Input::old('newsletter')) ? 'value = "' .e(Input::old('newsletter')). '" ':'' }}>
+                                        <input type="radio" class="grey" value="1" name="newsletter">
                                         Yes
                                     </label>
                                 </div>
@@ -312,7 +309,7 @@
 
 @section('scripts')
 <!-- Scripts for This page only -->
-<script src="{{ URL::asset('assets/js/modifiedJs/form-validation.js'); }}"></script>
+<script src="{{ URL::asset('//assets/js/modifiedJs/form-validation.js'); }}"></script>
 <script src="{{ URL::asset('assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js'); }}"></script>
 
 <script>
@@ -320,7 +317,7 @@ jQuery(document).ready(function() {
     Main.init();
     SVExamples.init();
     FormValidator.init();
-				FormElements.init();
+    FormElements.init();
 });
 </script>
 @stop

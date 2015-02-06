@@ -44,6 +44,14 @@ Route::group(array('before' => 'guest'), function(){
     /*
      * Create Account (get)
      */
+    Route::get('/thankyou', array(
+        'as'  => 'thank-you',
+        'uses' => 'NewAccountController@getThankYou'
+    ));
+
+    /*
+     * Create Account (get)
+     */
     Route::get('/account/create', array(
         'as'  => 'account-create',
         'uses' => 'NewAccountController@getCreate'
