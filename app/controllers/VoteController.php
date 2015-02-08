@@ -4,8 +4,9 @@ class VoteController extends BaseController {
 
     public function getMyBallot() {
 
-        $options = Options::where('active', '=', 1)->get();
-        return View::make('ballot.newBallot')->withoptions($options);
+        //$options = Options::where('active', '=', 1)->get();
+        //return View::make('ballot.newBallot')->withoptions($options);
+        return View::make('ballot.newBallot');
     }
 
     public function postMyBallot() {

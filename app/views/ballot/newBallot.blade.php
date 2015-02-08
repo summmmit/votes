@@ -22,27 +22,180 @@
 @stop
 
 @section('content')
-<div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-white">
-            <div class="panel-heading">
-                <h4 class="panel-title">Gallery</h4>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-default panel-white core-box">
+                <div class="panel-heading border-light">
+                    <h4 class="panel-title">Candidate 1</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <img src="{{ URL::asset('assets/images/new-images/arvind.jpg'); }}" class="img-responsive img-circle" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <img src="{{ URL::asset('assets/images/new-images/aap-logo.jpg'); }}" class="img-responsive img-rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-padding">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <div class="caption">
+                                        <h3>Arvind Kejriwal</h3>
+                                        <p>
+                                            <a href="#" class="btn btn-red btn-block">
+                                                His Details
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <div class="caption">
+                                    <h3>Aam Admi Party</h3>
+                                    <p>
+                                        <a href="#" class="btn btn-red btn-block">
+                                            Its Details
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-footer ">
+                    <a href="#" class="btn btn-green btn-block">
+                        Click here to Vote Him
+                    </a>
+                </div>
             </div>
-            <div class="panel-body">
-                <table>
-                    <form action="{{ URL::Route('account-user-ballot-post'); }}" method="post">>
-                        @foreach($options as $key)
-                        <tr>
-                            <td><button type="submit" value="{{ $key->id }}" name="choice" >{{ $key->options }}</button></td>
-                        </tr>
-                        @endforeach
-                        {{ Form::token() }}
-                    </form>
-                </table>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-default panel-white core-box">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Candidate 2</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <img src="{{ URL::asset('assets/images/new-images/Narendra_Modi.png'); }}" class="img-responsive img-circle" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <img src="{{ URL::asset('assets/images/new-images/bjp-logo.jpg'); }}" class="img-responsive img-rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-padding">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <div class="caption">
+                                        <h3>Narendra Modi</h3>
+                                        <p>
+                                            <a href="#" class="btn btn-red btn-block">
+                                                His Details
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <div class="caption">
+                                    <h3>Bhartiya Janta Party</h3>
+                                    <p>
+                                        <a href="#" class="btn btn-red btn-block">
+                                            Its Details
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-footer ">
+                    <a href="#" class="btn btn-green btn-block">
+                        Click here to Vote Him
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-default panel-white core-box">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Candidate 3</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <img src="{{ URL::asset('assets/images/new-images/Narendra_Modi.png'); }}" class="img-responsive img-circle" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <img src="{{ URL::asset('assets/images/new-images/bjp-logo.jpg'); }}" class="img-responsive img-rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-padding">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="user-left">
+                                <div class="center"?>
+                                    <div class="caption">
+                                        <h3>Narendra Modi</h3>
+                                        <p>
+                                            <a href="#" class="btn btn-red btn-block">
+                                                His Details
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="center">
+                                <div class="caption">
+                                    <h3>Bhartiya Janta Party</h3>
+                                    <p>
+                                        <a href="#" class="btn btn-red btn-block">
+                                            Its Details
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-footer ">
+                    <a href="#" class="btn btn-green btn-block">
+                        Click here to Vote Him
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
 @stop
 
 @section('scripts')

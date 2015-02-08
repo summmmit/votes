@@ -32,6 +32,7 @@ class NewAccountController extends BaseController {
         );
         if($validator->fails()){
             return Redirect::route('account-create')
+                ->withErrors($validator)
                 ->withInput();
         }else{
             $first_name                 = Input::get('first_name');
@@ -115,6 +116,13 @@ class NewAccountController extends BaseController {
     
     public function getSignIn(){
        return View::make('account.login');
+    }
+
+    public function postSignIn(){
+
+        echo "asgasg";
+
+        //return View::make('account.login');
     }
     
     public function getUserProfile(){

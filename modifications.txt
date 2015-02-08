@@ -3,3 +3,27 @@ Modifications to make :
 1. Add salutations in user account page .
 2. Change the address columns in user_details table to add1 and add2.
 3. Remove fathers uploading thumbnail , put a simple picture thumbnail.
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-white">
+            <div class="panel-heading">
+                <h4 class="panel-title">Gallery</h4>
+            </div>
+            <div class="panel-body">
+                <table>
+                    <form action="{{ URL::Route('account-user-ballot-post'); }}" method="post">>
+                        @foreach($options as $key)
+                        <tr>
+                            <td><button type="submit" value="{{ $key->id }}" name="choice" >{{ $key->options }}</button></td>
+                        </tr>
+                        @endforeach
+                        {{ Form::token() }}
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

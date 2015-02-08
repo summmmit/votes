@@ -45,7 +45,7 @@
 					<p>
 						Please enter your name and password to log in.
 					</p>
-					<form class="form-login" action="index.html">
+					<form class="form-login" action="{{ URL::route('account-sign-in-post'); }}" method="post">
 						<div class="errorHandler alert alert-danger no-display">
 							<i class="fa fa-remove-sign"></i> You have some form errors. Please check below.
 						</div>
@@ -79,6 +79,7 @@
 								</a>
 							</div>
 						</fieldset>
+						{{ Form::token() }}
 					</form>
 					<!-- start: COPYRIGHT -->
 					<div class="copyright">

@@ -20,8 +20,6 @@
     <div class="col-md-12">
         <!-- start: FORM VALIDATION 1 PANEL -->
         <div class="panel panel-white">
-            <div class="panel-heading">
-            </div>
             <div class="panel-body">
                 <form action="{{ URL::route('account-create-post') }}" role="form" id="form" method="post">
                     <div class="row">
@@ -309,7 +307,7 @@
 
 @section('scripts')
 <!-- Scripts for This page only -->
-<script src="{{ URL::asset('//assets/js/modifiedJs/form-validation.js'); }}"></script>
+<script src="{{ URL::asset('/assets/js/modifiedJs/form-validation.js'); }}"></script>
 <script src="{{ URL::asset('assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js'); }}"></script>
 
 <script>

@@ -116,10 +116,10 @@ var FormValidator = function() {
             groups: {
                 DateofBirth: "dd mm yyyy"
             },
-            invalidHandler: function(event, validator) { //display error alert on form submit
-                successHandler1.hide();
-                errorHandler1.show();
-            },
+            //invalidHandler: function(event, validator) { //display error alert on form submit
+            //    successHandler1.hide();
+            //    errorHandler1.show();
+            //},
             highlight: function(element) {
                 $(element).closest('.help-block').removeClass('valid');
                 // display OK icon
@@ -135,12 +135,12 @@ var FormValidator = function() {
                 // mark the current input as valid and display OK icon
                 $(element).closest('.form-group').removeClass('has-error').addClass('has-success').find('.symbol').removeClass('required').addClass('ok');
             },
-            submitHandler: function(form) {
-                successHandler1.show();
-                errorHandler1.hide();
-                // submit form
-                $('#form').submit();
-            }
+            //submitHandler: function(form) {
+            //    //successHandler1.show();
+            //    //errorHandler1.hide();
+            //    // submit form
+            //    $('#form').submit();
+            //}
         });
     };
     return {
